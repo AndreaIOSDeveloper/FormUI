@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Museo700-Regular.otf">
+            <string>Museo-700</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextField" customModule="FormUI" customModuleProvider="target">
+            <connections>
+                <outlet property="downTitleContraint" destination="g0D-ON-OgH" id="CSB-G2-XHL"/>
+                <outlet property="passwordButton" destination="LIY-x5-iAw" id="RFt-fy-z6T"/>
+                <outlet property="separatorBottom" destination="zu9-Oj-RCH" id="B2R-Fn-ap9"/>
+                <outlet property="separatorLeft" destination="T1W-9J-leE" id="WGv-gJ-XoL"/>
+                <outlet property="separatorTopLeft" destination="nh4-Hu-2Np" id="2Kx-vP-KKl"/>
+                <outlet property="separatorTopRight" destination="xSb-qe-K3c" id="ZgL-Pn-NnW"/>
+                <outlet property="sepratorRight" destination="AWn-4f-ssn" id="cDD-xr-tyn"/>
+                <outlet property="textField" destination="w6n-yM-CDX" id="HcR-NV-KeX"/>
+                <outlet property="titleLabel" destination="oEL-Sx-9oJ" id="K59-cU-JKN"/>
+                <outlet property="topTitleContraint" destination="BkZ-KT-Vn6" id="fts-lx-NQH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="108"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh4-Hu-2Np" userLabel="SepatetorTopLeft">
+                    <rect key="frame" x="0.0" y="89.5" width="4" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="1Pm-jq-Y51"/>
+                        <constraint firstAttribute="width" constant="4" id="nW1-Ti-CJA"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cct-r9-bUz">
+                    <rect key="frame" x="1" y="59" width="297" height="48"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6n-yM-CDX" userLabel="NameTextField" customClass="InsettableTextField" customModule="FormUI" customModuleProvider="target">
+                            <rect key="frame" x="10" y="23" width="232" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-x5-iAw">
+                            <rect key="frame" x="252" y="0.0" width="35" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="e7a-OZ-AxT"/>
+                                <constraint firstAttribute="height" constant="40" id="uGg-G6-veY"/>
+                            </constraints>
+                            <state key="normal" image="eye_open"/>
+                            <connections>
+                                <action selector="showPasswordDIdTap:" destination="-1" eventType="touchUpInside" id="Ale-SS-wTK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6ZH-OW-j7G"/>
+                        <constraint firstItem="w6n-yM-CDX" firstAttribute="leading" secondItem="cct-r9-bUz" secondAttribute="leading" constant="10" id="H1o-ne-8qv"/>
+                        <constraint firstAttribute="bottom" secondItem="w6n-yM-CDX" secondAttribute="bottom" constant="8" id="qtb-Tu-UEV"/>
+                        <constraint firstItem="LIY-x5-iAw" firstAttribute="leading" secondItem="w6n-yM-CDX" secondAttribute="trailing" constant="10" id="xlc-N8-L81"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="8" right="10"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-Sx-9oJ" userLabel="NameLabel">
+                    <rect key="frame" x="12" y="81" width="37.5" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="caG-j3-JOC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Museo-700" family="Museo" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWn-4f-ssn" userLabel="SeparatorRight">
+                    <rect key="frame" x="298" y="90.5" width="1" height="17.5"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="Vg1-MG-esa"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-qe-K3c" userLabel="SeparatorTopRight">
+                    <rect key="frame" x="57.5" y="89.5" width="241.5" height="1"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="LYY-6B-Q4o"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="nNT-ZW-bpg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zu9-Oj-RCH" userLabel="bottom">
+                    <rect key="frame" x="0.0" y="107" width="299" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="6LZ-Gb-3Gb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-9J-leE" userLabel="SeparatorLeft">
+                    <rect key="frame" x="0.0" y="89.5" width="1" height="18.5"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="73z-3k-rJl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="xSb-qe-K3c" firstAttribute="centerY" secondItem="oEL-Sx-9oJ" secondAttribute="centerY" id="72m-tG-Kb4"/>
+                <constraint firstAttribute="bottom" secondItem="T1W-9J-leE" secondAttribute="bottom" id="AB8-08-Pzy"/>
+                <constraint firstItem="oEL-Sx-9oJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" id="BkZ-KT-Vn6"/>
+                <constraint firstItem="cct-r9-bUz" firstAttribute="leading" secondItem="T1W-9J-leE" secondAttribute="trailing" id="EZ1-Sq-oj0"/>
+                <constraint firstItem="T1W-9J-leE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GXz-ox-Oad"/>
+                <constraint firstItem="zu9-Oj-RCH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hoi-rT-it1"/>
+                <constraint firstItem="AWn-4f-ssn" firstAttribute="top" secondItem="xSb-qe-K3c" secondAttribute="bottom" id="NUA-I4-cEn"/>
+                <constraint firstItem="zu9-Oj-RCH" firstAttribute="top" secondItem="cct-r9-bUz" secondAttribute="bottom" id="VsF-wA-QUY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AWn-4f-ssn" secondAttribute="trailing" id="WyU-IM-N0d"/>
+                <constraint firstItem="xSb-qe-K3c" firstAttribute="leading" secondItem="oEL-Sx-9oJ" secondAttribute="trailing" constant="8" id="bbg-5e-5nR"/>
+                <constraint firstAttribute="bottom" secondItem="AWn-4f-ssn" secondAttribute="bottom" id="ced-lV-okX"/>
+                <constraint firstItem="zu9-Oj-RCH" firstAttribute="top" secondItem="oEL-Sx-9oJ" secondAttribute="bottom" constant="8" id="g0D-ON-OgH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zu9-Oj-RCH" secondAttribute="bottom" id="gFb-xt-Uey"/>
+                <constraint firstItem="zu9-Oj-RCH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hcu-pF-nId"/>
+                <constraint firstItem="nh4-Hu-2Np" firstAttribute="leading" secondItem="T1W-9J-leE" secondAttribute="leading" id="lmc-iU-9sG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AWn-4f-ssn" secondAttribute="trailing" id="nyW-2l-3gr"/>
+                <constraint firstItem="AWn-4f-ssn" firstAttribute="leading" secondItem="cct-r9-bUz" secondAttribute="trailing" id="rIE-hh-ZGc"/>
+                <constraint firstItem="oEL-Sx-9oJ" firstAttribute="leading" secondItem="nh4-Hu-2Np" secondAttribute="trailing" constant="8" id="sk2-DC-AgH"/>
+                <constraint firstAttribute="trailing" secondItem="xSb-qe-K3c" secondAttribute="trailing" id="tCL-Lp-mZ7"/>
+                <constraint firstItem="nh4-Hu-2Np" firstAttribute="centerY" secondItem="oEL-Sx-9oJ" secondAttribute="centerY" id="v5l-7a-PNf"/>
+                <constraint firstItem="T1W-9J-leE" firstAttribute="top" secondItem="nh4-Hu-2Np" secondAttribute="top" id="vvW-17-mjY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-251" y="198"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eye_open" width="16" height="16"/>
+    </resources>
+</document>
