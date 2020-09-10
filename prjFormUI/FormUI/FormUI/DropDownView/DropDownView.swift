@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 public protocol DropDownViewDelegate: class {
-    func dropDownDidPress(currentDropDown: DropDownView, textDidSelected text: String)
+    func dropDownDidPress(_ dropDown: DropDownView, textDidSelected text: String)
+}
+
+public protocol DropDownViewDataSource: class {
+    func dropDown(_ dropDown: DropDownView) -> [String]
 }
 
 public class DropDownView: NibView {
@@ -22,10 +26,17 @@ public class DropDownView: NibView {
     private var delegateSearchTableView: SearchTableViewControllerDelegate?
     private var isDropdownStateTouch = false
     private var textTitleColor: UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    private weak var delegateDropDownView: DropDownViewDelegate?
+    private var elements: [String] = []
     
-    public var elements: [String] = []
-    public var delegate = UIViewController()
+    private weak var delegateDropDownView: DropDownViewDelegate?
+    public var delegate: UIViewController?
+    public weak var datasource: DropDownViewDataSource? {
+        didSet {
+            elements = datasource?.dropDown(self) ?? []
+        }
+    }
+    
+    // TODO: Inserimento elements in run time
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +50,7 @@ public class DropDownView: NibView {
     }
     
     // MARK: - Private
+    
     private func presentPopover() {
         tableViewController.delegate = delegateSearchTableView
         tableViewController.elements = elements
@@ -53,7 +65,7 @@ public class DropDownView: NibView {
                                                            width: self.frame.size.width,
                                                            height: self.frame.size.height)
         
-        delegate.present(tableViewController, animated: true)
+        delegate?.present(tableViewController, animated: true)
     }
     
     private func change(title: String) {
@@ -62,6 +74,7 @@ public class DropDownView: NibView {
     }
     
     // MARK: - IBAction
+    
     @IBAction private func arrowButtonDidPress(_ sender: Any) {
         isDropdownStateTouch.toggle()
         arrowButton.transform = arrowButton.transform.rotated(by: .pi)
@@ -79,6 +92,7 @@ public class DropDownView: NibView {
     ///     Configure title and color and other of dropDownView
     ///
     /// - Parameter placeholderTitle for set the title on screen
+    
     public func configureDropDownView(with placeholderTitle: String = "Placeholder", placeholdertTextTitleColor: UIColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), textTitleColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), colorArrow: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), dropDownBorderColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)) {
         titleLable.text = placeholderTitle
         
@@ -95,11 +109,11 @@ public class DropDownView: NibView {
 
 extension DropDownView: SearchTableViewControllerDelegate {
     public func searchDidComplete(with elem: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.change(title: elem)
-            self?.delegateDropDownView?.dropDownDidPress(currentDropDown: self!, textDidSelected: elem)
-            self?.arrowButton.transform = self?.arrowButton.transform.rotated(by: .pi) ?? CGAffineTransform(rotationAngle: 0)
-            self?.delegate.dismiss(animated: true)
+        DispatchQueue.main.async {
+            self.change(title: elem)
+            self.delegateDropDownView?.dropDownDidPress(self, textDidSelected: elem)
+            self.arrowButton.transform = self.arrowButton.transform.rotated(by: .pi)
+            self.delegate?.dismiss(animated: true)
         }
     }
 }

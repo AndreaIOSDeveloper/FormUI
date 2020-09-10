@@ -29,8 +29,8 @@ class ViewController: UIViewController, AutomaticScrollViewInsets {
         test2.setBorder(color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
 
         testDropView.delegate = self
+        testDropView.datasource = self
         //testDropView.configureDropDownView(with: "placeholder", textTitleColor: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), colorArrow: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), dropDownBorderColor: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1))
-        testDropView.elements = ["planA","planTest","discovery"]
 
         // TODO: Inserirla da codice
         //  let example = CustomTextField()
@@ -47,8 +47,13 @@ class ViewController: UIViewController, AutomaticScrollViewInsets {
     }
 }
 
-extension ViewController: DropDownViewDelegate {
-    func dropDownDidPress(currentDropDown: DropDownView, textDidSelected text: String) {
+
+extension ViewController: DropDownViewDelegate, DropDownViewDataSource {    
+    func dropDown(_ dropDown: DropDownView) -> [String] {
+        return ["a","b"]
+    }
+    
+    func dropDownDidPress(_ dropDown: DropDownView, textDidSelected text: String) {
         print("dropDownDidPress: "+text)
     }
 }

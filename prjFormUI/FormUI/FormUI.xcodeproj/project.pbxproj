@@ -21,6 +21,7 @@
 		4AA0206D24FBA408006F628A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0206924FBA408006F628A /* SearchTableViewCell.swift */; };
 		4AA0206F24FBA4BA006F628A /* InsettableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0206E24FBA4BA006F628A /* InsettableLabel.swift */; };
 		4AA0207124FBA507006F628A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0207024FBA507006F628A /* String+.swift */; };
+		4AA0207F24FD626A006F628A /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0207E24FD626A006F628A /* Bundle+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4AA0206924FBA408006F628A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		4AA0206E24FBA4BA006F628A /* InsettableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableLabel.swift; sourceTree = "<group>"; };
 		4AA0207024FBA507006F628A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		4AA0207E24FD626A006F628A /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				4AA0205324FA83A8006F628A /* UIView+.swift */,
 				4AA0205524FA83EB006F628A /* UITextField+.swift */,
 				4AA0207024FBA507006F628A /* String+.swift */,
+				4AA0207E24FD626A006F628A /* Bundle+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				4AA0206A24FBA408006F628A /* SearchTableViewController.swift in Sources */,
 				4AA0205224FA8389006F628A /* NibView.swift in Sources */,
 				4AA0206B24FBA408006F628A /* DropDownView.swift in Sources */,
+				4AA0207F24FD626A006F628A /* Bundle+.swift in Sources */,
 				4AA0205F24FAD092006F628A /* AutomaticScrollViewInsets.swift in Sources */,
 				4AA0206D24FBA408006F628A /* SearchTableViewCell.swift in Sources */,
 				4AA0204D24FA8357006F628A /* CustomTextField.swift in Sources */,

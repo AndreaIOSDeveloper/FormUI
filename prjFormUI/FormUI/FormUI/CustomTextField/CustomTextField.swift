@@ -75,7 +75,7 @@ public class CustomTextField: NibView {
     }
     
     func assetsImage(with name: String) -> UIImage {
-        return UIImage(named: name, in: Bundle.init(identifier: "com.company.FormUI"), compatibleWith: nil) ?? UIImage()
+        return UIImage(named: name, in: Bundle.bundleFormUI, compatibleWith: nil) ?? UIImage()
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -113,4 +113,3 @@ extension CustomTextField: UITextFieldDelegate {
         }
     }
 }
-
