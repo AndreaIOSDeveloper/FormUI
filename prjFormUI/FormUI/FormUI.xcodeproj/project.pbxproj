@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7ABFCE25125AA300DFFAFC /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ABFCD25125AA300DFFAFC /* SwitchButton.swift */; };
+		4A7ABFD125125B9D00DFFAFC /* CustomSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7ABFD025125B9D00DFFAFC /* CustomSwitch.xib */; };
+		4A7ABFD425125C6700DFFAFC /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ABFD325125C6700DFFAFC /* CustomSwitch.swift */; };
 		4AA0203324FA66A6006F628A /* FormUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AA0203124FA66A6006F628A /* FormUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AA0204D24FA8357006F628A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0204B24FA8357006F628A /* CustomTextField.swift */; };
 		4AA0204E24FA8357006F628A /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0204C24FA8357006F628A /* CustomTextField.xib */; };
@@ -22,9 +25,13 @@
 		4AA0206F24FBA4BA006F628A /* InsettableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0206E24FBA4BA006F628A /* InsettableLabel.swift */; };
 		4AA0207124FBA507006F628A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0207024FBA507006F628A /* String+.swift */; };
 		4AA0207F24FD626A006F628A /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0207E24FD626A006F628A /* Bundle+.swift */; };
+		4AF6C42E250B879400FF8126 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6C42D250B879400FF8126 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A7ABFCD25125AA300DFFAFC /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		4A7ABFD025125B9D00DFFAFC /* CustomSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSwitch.xib; sourceTree = "<group>"; };
+		4A7ABFD325125C6700DFFAFC /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		4AA0202E24FA66A6006F628A /* FormUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA0203124FA66A6006F628A /* FormUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormUI.h; sourceTree = "<group>"; };
 		4AA0203224FA66A6006F628A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		4AA0206E24FBA4BA006F628A /* InsettableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettableLabel.swift; sourceTree = "<group>"; };
 		4AA0207024FBA507006F628A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		4AA0207E24FD626A006F628A /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		4AF6C42D250B879400FF8126 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7ABFCB2512598A00DFFAFC /* SwitchButton */ = {
+			isa = PBXGroup;
+			children = (
+				4A7ABFD325125C6700DFFAFC /* CustomSwitch.swift */,
+				4A7ABFCD25125AA300DFFAFC /* SwitchButton.swift */,
+				4A7ABFD025125B9D00DFFAFC /* CustomSwitch.xib */,
+			);
+			path = SwitchButton;
+			sourceTree = "<group>";
+		};
 		4AA0202424FA66A6006F628A = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +93,7 @@
 		4AA0203024FA66A6006F628A /* FormUI */ = {
 			isa = PBXGroup;
 			children = (
+				4A7ABFCB2512598A00DFFAFC /* SwitchButton */,
 				4AA0205024FA8374006F628A /* Utility */,
 				4AA0204F24FA836B006F628A /* Extension */,
 				4AA0203124FA66A6006F628A /* FormUI.h */,
@@ -101,6 +120,7 @@
 				4AA0205524FA83EB006F628A /* UITextField+.swift */,
 				4AA0207024FBA507006F628A /* String+.swift */,
 				4AA0207E24FD626A006F628A /* Bundle+.swift */,
+				4AF6C42D250B879400FF8126 /* UIImageView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -199,6 +219,7 @@
 				4AA0206C24FBA408006F628A /* DropDownView.xib in Resources */,
 				4AA0206124FAD365006F628A /* Assets.xcassets in Resources */,
 				4AA0204E24FA8357006F628A /* CustomTextField.xib in Resources */,
+				4A7ABFD125125B9D00DFFAFC /* CustomSwitch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,13 +232,16 @@
 			files = (
 				4AA0205424FA83A8006F628A /* UIView+.swift in Sources */,
 				4AA0206F24FBA4BA006F628A /* InsettableLabel.swift in Sources */,
+				4A7ABFCE25125AA300DFFAFC /* SwitchButton.swift in Sources */,
 				4AA0207124FBA507006F628A /* String+.swift in Sources */,
+				4A7ABFD425125C6700DFFAFC /* CustomSwitch.swift in Sources */,
 				4AA0206A24FBA408006F628A /* SearchTableViewController.swift in Sources */,
 				4AA0205224FA8389006F628A /* NibView.swift in Sources */,
 				4AA0206B24FBA408006F628A /* DropDownView.swift in Sources */,
 				4AA0207F24FD626A006F628A /* Bundle+.swift in Sources */,
 				4AA0205F24FAD092006F628A /* AutomaticScrollViewInsets.swift in Sources */,
 				4AA0206D24FBA408006F628A /* SearchTableViewCell.swift in Sources */,
+				4AF6C42E250B879400FF8126 /* UIImageView+.swift in Sources */,
 				4AA0204D24FA8357006F628A /* CustomTextField.swift in Sources */,
 				4AA0205624FA83EB006F628A /* UITextField+.swift in Sources */,
 			);

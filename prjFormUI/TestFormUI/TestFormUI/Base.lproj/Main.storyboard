@@ -41,19 +41,29 @@
                                     <constraint firstAttribute="height" constant="70" id="1JI-IS-GuB"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rT-4N-GdS" customClass="CustomSwitch" customModule="FormUI">
+                                <rect key="frame" x="12" y="324" width="390" height="40"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rlR-XW-I9B"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Drj-g1-gM3" secondAttribute="trailing" constant="12" id="3AX-FR-9be"/>
                             <constraint firstItem="ZKu-mI-W9k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3zF-m6-jJr"/>
+                            <constraint firstItem="9rT-4N-GdS" firstAttribute="top" secondItem="Drj-g1-gM3" secondAttribute="bottom" constant="20" id="5py-o8-gZG"/>
                             <constraint firstItem="Tlc-7g-2aw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="6s2-sx-knL"/>
                             <constraint firstItem="Drj-g1-gM3" firstAttribute="top" secondItem="8Pl-H0-zej" secondAttribute="bottom" constant="10" id="AKP-9a-lrc"/>
+                            <constraint firstItem="9rT-4N-GdS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="DR0-SC-5zl"/>
                             <constraint firstAttribute="trailing" secondItem="ZKu-mI-W9k" secondAttribute="trailing" constant="12" id="WtZ-af-5Pg"/>
                             <constraint firstItem="ZKu-mI-W9k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZJV-ds-RZM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tlc-7g-2aw" secondAttribute="trailing" constant="12" id="fOy-GG-WhC"/>
                             <constraint firstItem="ZKu-mI-W9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="fed-wF-MBv"/>
                             <constraint firstItem="Drj-g1-gM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="gQe-vN-5Q6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tlc-7g-2aw" secondAttribute="bottom" constant="20" id="hwO-cg-ZhP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9rT-4N-GdS" secondAttribute="trailing" constant="12" id="lTz-c1-vX3"/>
                             <constraint firstItem="Tlc-7g-2aw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n8W-Hu-P4O"/>
                             <constraint firstItem="8Pl-H0-zej" firstAttribute="top" secondItem="ZKu-mI-W9k" secondAttribute="bottom" constant="20" id="nbX-ym-ZGP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Pl-H0-zej" secondAttribute="trailing" constant="12" id="uJT-Fp-jXv"/>

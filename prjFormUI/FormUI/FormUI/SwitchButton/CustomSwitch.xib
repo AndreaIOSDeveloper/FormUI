@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSwitch" customModule="FormUI" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonSwitch" destination="MGr-yJ-z3W" id="AGU-fr-2eK"/>
+                <outlet property="cellTextSwitch" destination="jvg-LQ-wa7" id="NtX-o0-y5b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cZa-8s-qyu">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BH5-pj-4Dt">
+                    <rect key="frame" x="0.0" y="0.0" width="380" height="172"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="jvg-LQ-wa7">
+                            <rect key="frame" x="0.0" y="0.0" width="9.5" height="172"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGr-yJ-z3W" customClass="SwitchButton" customModule="FormUI" customModuleProvider="target">
+                            <rect key="frame" x="350" y="0.0" width="30" height="172"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="BH5-pj-4Dt" firstAttribute="top" secondItem="cZa-8s-qyu" secondAttribute="top" id="hQR-tz-PAQ"/>
+                <constraint firstAttribute="trailing" secondItem="BH5-pj-4Dt" secondAttribute="trailing" id="lbx-Cl-xo6"/>
+                <constraint firstItem="BH5-pj-4Dt" firstAttribute="leading" secondItem="cZa-8s-qyu" secondAttribute="leading" id="llu-wi-8wo"/>
+                <constraint firstAttribute="bottom" secondItem="BH5-pj-4Dt" secondAttribute="bottom" id="q3D-Zq-et2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="248" y="423.68815592203902"/>
+        </view>
+    </objects>
+</document>
